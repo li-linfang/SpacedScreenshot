@@ -1,0 +1,15 @@
+C:\Users\JVT202107009\source\repos\SpacedScreenshot\SpacedScreenshot\bin\Debug\net6.0\SpacedScreenshot.exe
+C:\Users\JVT202107009\source\repos\SpacedScreenshot\SpacedScreenshot\bin\Debug\net6.0\SpacedScreenshot.deps.json
+C:\Users\JVT202107009\source\repos\SpacedScreenshot\SpacedScreenshot\bin\Debug\net6.0\SpacedScreenshot.runtimeconfig.json
+C:\Users\JVT202107009\source\repos\SpacedScreenshot\SpacedScreenshot\bin\Debug\net6.0\SpacedScreenshot.dll
+C:\Users\JVT202107009\source\repos\SpacedScreenshot\SpacedScreenshot\bin\Debug\net6.0\SpacedScreenshot.pdb
+C:\Users\JVT202107009\source\repos\SpacedScreenshot\SpacedScreenshot\obj\Debug\net6.0\SpacedScreenshot.csproj.AssemblyReference.cache
+C:\Users\JVT202107009\source\repos\SpacedScreenshot\SpacedScreenshot\obj\Debug\net6.0\SpacedScreenshot.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JVT202107009\source\repos\SpacedScreenshot\SpacedScreenshot\obj\Debug\net6.0\SpacedScreenshot.AssemblyInfoInputs.cache
+C:\Users\JVT202107009\source\repos\SpacedScreenshot\SpacedScreenshot\obj\Debug\net6.0\SpacedScreenshot.AssemblyInfo.cs
+C:\Users\JVT202107009\source\repos\SpacedScreenshot\SpacedScreenshot\obj\Debug\net6.0\SpacedScreenshot.csproj.CoreCompileInputs.cache
+C:\Users\JVT202107009\source\repos\SpacedScreenshot\SpacedScreenshot\obj\Debug\net6.0\SpacedScreenshot.dll
+C:\Users\JVT202107009\source\repos\SpacedScreenshot\SpacedScreenshot\obj\Debug\net6.0\refint\SpacedScreenshot.dll
+C:\Users\JVT202107009\source\repos\SpacedScreenshot\SpacedScreenshot\obj\Debug\net6.0\SpacedScreenshot.pdb
+C:\Users\JVT202107009\source\repos\SpacedScreenshot\SpacedScreenshot\obj\Debug\net6.0\SpacedScreenshot.genruntimeconfig.cache
+C:\Users\JVT202107009\source\repos\SpacedScreenshot\SpacedScreenshot\obj\Debug\net6.0\ref\SpacedScreenshot.dll
