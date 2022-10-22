@@ -58,11 +58,6 @@ namespace SpacedScreenshot
         public int DeleteCompressedPackageDay { get => _deleteCompressedPackageDay; set => _deleteCompressedPackageDay = value; }
 
 
-
-
-        // Access the private variables using getters and setters
-
-
         public void Start()
         {
             FolderStructureObject folderStructure = new FolderStructureObject(_targetFolder, _folderStructureMethod);
@@ -73,6 +68,7 @@ namespace SpacedScreenshot
             Task autoCompressOrDeleteTask = new Task(() => AutoCompressOrDelete(_targetFolder, _autoCompressEnable, _compresssDay, _autoDeleteCompressedPackageEnable, _deleteCompressedPackageDay));
 
             startTakeScreenTask.Start();
+
             if (_pauseWhenNotActiveEnable)
                 pauseTakeWhenUserNotActiveTask.Start();
             if (_autoCompressEnable || _autoDeleteCompressedPackageEnable)
@@ -95,14 +91,14 @@ namespace SpacedScreenshot
             while(true)
             {
                 Task.Delay(spaceTime*1000).Wait();
-                TakeScreenShotMock(folderStructure.GetScreenshotPath(), screenshotImage.GetScreenshotFilename());
+                TakeScreenShot(folderStructure.GetScreenshotPath(), screenshotImage.GetScreenshotFilename());
             }
         }
 
-        private void TakeScreenShotMock(string path, string name)
+        private void TakeScreenShot(string path, string name)
         {
             // Mock
-            Console.WriteLine($"【{path}】Took a screenshot: {name}");
+            Console.WriteLine($"[{path}] Took a screenshot: {name}");
 
             Graphics g = Graphics.FromImage(_bmpScreenshot);
             g.CopyFromScreen(Screen.PrimaryScreen.Bounds.X, Screen.PrimaryScreen.Bounds.Y, 0, 0, Screen.PrimaryScreen.Bounds.Size, CopyPixelOperation.SourceCopy);
@@ -115,8 +111,6 @@ namespace SpacedScreenshot
                 case "png": imageFormat = ImageFormat.Png;break;
             }
             _bmpScreenshot.Save($"{path}\\{name}", ImageFormat.Jpeg);
-            /**
-            **/
         }
 
         class FolderStructureObject
@@ -146,7 +140,7 @@ namespace SpacedScreenshot
                 switch (_method)
                 {
                     case 0: subFolder = $"{DateTime.Now.ToString("HH")}-{DateTime.Now.AddHours(1).ToString("HH")}"; break;
-                    case 1: subFolder = int.Parse(DateTime.Now.ToString("HH")) < 12 ? "上午" : "下午"; break;
+                    case 1: subFolder = int.Parse(DateTime.Now.ToString("HH")) < 12 ? "AM" : "PM"; break;
                     case 2: subFolder = ""; break;
                 }
                 var path = $"{_targetFolder}\\{today}\\{subFolder}";
@@ -210,8 +204,8 @@ namespace SpacedScreenshot
                 switch (_namingRule)
                 {
                     case 0: name = (_seq++)+""; break;
-                    case 1: name = DateTime.Now.ToString("yyyy-MM-dd_HH_mm_ss"); break;
-                    case 2: name = $"{_seq++}_{DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss")}"; break;
+                    case 1: name = DateTime.Now.ToString("yyyy-MM-dd~HH_mm_ss"); break;
+                    case 2: name = $"{_seq++}_{DateTime.Now.ToString("yyyy-MM-dd~HH-mm-ss")}"; break;
                 }
 
                 return $"{_prefix}_{name}_{_suffix}.{formatSuffix}";

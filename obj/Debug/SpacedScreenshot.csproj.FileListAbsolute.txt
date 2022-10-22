@@ -6,3 +6,11 @@ C:\Users\11\source\repos\SpacedScreenshot\obj\Debug\SpacedScreenshot.csproj.Sugg
 C:\Users\11\source\repos\SpacedScreenshot\obj\Debug\SpacedScreenshot.csproj.CoreCompileInputs.cache
 C:\Users\11\source\repos\SpacedScreenshot\obj\Debug\SpacedScreenshot.exe
 C:\Users\11\source\repos\SpacedScreenshot\obj\Debug\SpacedScreenshot.pdb
+D:\Windows数据移动到此文件夹\Documents\GitHub\SpacedScreenshot\bin\Debug\SpacedScreenshot.exe.config
+D:\Windows数据移动到此文件夹\Documents\GitHub\SpacedScreenshot\bin\Debug\SpacedScreenshot.exe
+D:\Windows数据移动到此文件夹\Documents\GitHub\SpacedScreenshot\bin\Debug\SpacedScreenshot.pdb
+D:\Windows数据移动到此文件夹\Documents\GitHub\SpacedScreenshot\obj\Debug\SpacedScreenshot.csproj.AssemblyReference.cache
+D:\Windows数据移动到此文件夹\Documents\GitHub\SpacedScreenshot\obj\Debug\SpacedScreenshot.csproj.SuggestedBindingRedirects.cache
+D:\Windows数据移动到此文件夹\Documents\GitHub\SpacedScreenshot\obj\Debug\SpacedScreenshot.csproj.CoreCompileInputs.cache
+D:\Windows数据移动到此文件夹\Documents\GitHub\SpacedScreenshot\obj\Debug\SpacedScreenshot.exe
+D:\Windows数据移动到此文件夹\Documents\GitHub\SpacedScreenshot\obj\Debug\SpacedScreenshot.pdb
