@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JVT202107009\\source\\repos\\SpacedScreenshot\\SpacedScreenshot\\SpacedScreenshot.csproj": {}
+    "D:\\Windows数据移动到此文件夹\\Documents\\GitHub\\SpacedScreenshot\\SpacedScreenshot\\SpacedScreenshot.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JVT202107009\\source\\repos\\SpacedScreenshot\\SpacedScreenshot\\SpacedScreenshot.csproj": {
+    "D:\\Windows数据移动到此文件夹\\Documents\\GitHub\\SpacedScreenshot\\SpacedScreenshot\\SpacedScreenshot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JVT202107009\\source\\repos\\SpacedScreenshot\\SpacedScreenshot\\SpacedScreenshot.csproj",
+        "projectUniqueName": "D:\\Windows数据移动到此文件夹\\Documents\\GitHub\\SpacedScreenshot\\SpacedScreenshot\\SpacedScreenshot.csproj",
         "projectName": "SpacedScreenshot",
-        "projectPath": "C:\\Users\\JVT202107009\\source\\repos\\SpacedScreenshot\\SpacedScreenshot\\SpacedScreenshot.csproj",
-        "packagesPath": "C:\\Users\\JVT202107009\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JVT202107009\\source\\repos\\SpacedScreenshot\\SpacedScreenshot\\obj\\",
+        "projectPath": "D:\\Windows数据移动到此文件夹\\Documents\\GitHub\\SpacedScreenshot\\SpacedScreenshot\\SpacedScreenshot.csproj",
+        "packagesPath": "C:\\Users\\11\\.nuget\\packages\\",
+        "outputPath": "D:\\Windows数据移动到此文件夹\\Documents\\GitHub\\SpacedScreenshot\\SpacedScreenshot\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\JVT202107009\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\11\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

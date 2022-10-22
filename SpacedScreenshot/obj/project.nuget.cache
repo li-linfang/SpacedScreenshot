@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "AQMkBM2AN82F24QUSKqFGqACsgrxqMQ5BPcH5zb2Q6SympBIV6OGDfiOc1hNa5AqaKFHnEFPw6wybYPucIvvug==",
+  "dgSpecHash": "7UaMYMrqwbaWomVdD/E3FW6m9LlkpjUj6QhgLHDjniVW9ZUfJRDSlI47Wgx2l1wL1AZGlTiJtMIRsH7mBYk0kA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\JVT202107009\\source\\repos\\SpacedScreenshot\\SpacedScreenshot\\SpacedScreenshot.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Windows数据移动到此文件夹\\Documents\\GitHub\\SpacedScreenshot\\SpacedScreenshot\\SpacedScreenshot.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\11\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\11\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
