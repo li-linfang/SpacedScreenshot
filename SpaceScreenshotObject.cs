@@ -26,8 +26,8 @@ namespace SpacedScreenshot
 
         // Timing
         private int _spacedTime;
-        private int _notActiveTime;
         private bool _pauseWhenNotActiveEnable;
+        private int _notActiveTime;
 
         // Other options
         private bool _autoCompressEnable;
@@ -36,9 +36,33 @@ namespace SpacedScreenshot
         private int _deleteCompressedPackageDay;
 
 
+        public SpaceScreenshotObject()
+        {
+        }
+        // Constructor
+        public SpaceScreenshotObject(string targetFolder, int folderStructureMethod, int screenshotFormat, int screenshotQuality, string screenshotPrefix, int screenshotNamingRule, string screenshotSuffix, int spacedTime, bool pauseWhenNotActiveEnable, int notActiveTime, bool autoCompressEnable, int compresssDay, bool autoDeleteCompressedPackageEnable, int deleteCompressedPackageDay)
+        {
+            _targetFolder = targetFolder;
+            _folderStructureMethod = folderStructureMethod;
+            _screenshotFormat = screenshotFormat;
+            _screenshotQuality = screenshotQuality;
+            _screenshotPrefix = screenshotPrefix;
+            _screenshotNamingRule = screenshotNamingRule;
+            _screenshotSuffix = screenshotSuffix;
+            _spacedTime = spacedTime;
+            _pauseWhenNotActiveEnable = pauseWhenNotActiveEnable;
+            _notActiveTime = notActiveTime;
+            _autoCompressEnable = autoCompressEnable;
+            _compresssDay = compresssDay;
+            _autoDeleteCompressedPackageEnable = autoDeleteCompressedPackageEnable;
+            _deleteCompressedPackageDay = deleteCompressedPackageDay;
+        }
+
+
 
         // bitmap object initial
         private Bitmap _bmpScreenshot = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height, PixelFormat.Format32bppArgb);
+
 
 
         // getter and setter
@@ -139,7 +163,7 @@ namespace SpacedScreenshot
                 var subFolder = "";
                 switch (_method)
                 {
-                    case 0: subFolder = $"{DateTime.Now.ToString("HH")}-{DateTime.Now.AddHours(1).ToString("HH")}"; break;
+                    case 0: subFolder = $"{DateTime.Now.ToString("HH")}~{DateTime.Now.AddHours(1).ToString("HH")}"; break;
                     case 1: subFolder = int.Parse(DateTime.Now.ToString("HH")) < 12 ? "AM" : "PM"; break;
                     case 2: subFolder = ""; break;
                 }
