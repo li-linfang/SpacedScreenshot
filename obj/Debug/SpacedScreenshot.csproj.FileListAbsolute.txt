@@ -11,8 +11,8 @@ D:\Windows数据移动到此文件夹\Documents\GitHub\SpacedScreenshot\bin\Debu
 D:\Windows数据移动到此文件夹\Documents\GitHub\SpacedScreenshot\bin\Debug\SpacedScreenshot.pdb
 D:\Windows数据移动到此文件夹\Documents\GitHub\SpacedScreenshot\obj\Debug\SpacedScreenshot.csproj.AssemblyReference.cache
 D:\Windows数据移动到此文件夹\Documents\GitHub\SpacedScreenshot\obj\Debug\SpacedScreenshot.csproj.SuggestedBindingRedirects.cache
+D:\Windows数据移动到此文件夹\Documents\GitHub\SpacedScreenshot\obj\Debug\SpacedScreenshot.Properties.Resource1.resources
+D:\Windows数据移动到此文件夹\Documents\GitHub\SpacedScreenshot\obj\Debug\SpacedScreenshot.csproj.GenerateResource.cache
 D:\Windows数据移动到此文件夹\Documents\GitHub\SpacedScreenshot\obj\Debug\SpacedScreenshot.csproj.CoreCompileInputs.cache
 D:\Windows数据移动到此文件夹\Documents\GitHub\SpacedScreenshot\obj\Debug\SpacedScreenshot.exe
 D:\Windows数据移动到此文件夹\Documents\GitHub\SpacedScreenshot\obj\Debug\SpacedScreenshot.pdb
-D:\Windows数据移动到此文件夹\Documents\GitHub\SpacedScreenshot\obj\Debug\SpacedScreenshot.Properties.Resource1.resources
-D:\Windows数据移动到此文件夹\Documents\GitHub\SpacedScreenshot\obj\Debug\SpacedScreenshot.csproj.GenerateResource.cache

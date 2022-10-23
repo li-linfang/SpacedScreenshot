@@ -68,7 +68,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ReadMe.txt" />
+    <None Include="README.md" />
     <None Include="Resources\AppIcon.ico" />
   </ItemGroup>
   <ItemGroup>
