@@ -1,4 +1,4 @@
-﻿# SpacedScreenshot
+﻿# ![](./Resources/AppIcon.ico)SpacedScreenshot
 
 定时截取 Windows 的屏幕，方便在探索性的软件功能测试中发现 Bug 时，准确回溯操作步骤，进行 Bug 描述与复现。
 
@@ -21,3 +21,9 @@ Todo
 NotToDo
 
 - 定时压缩和定时删除功能，暂无必要。之后视情况添加此功能
+
+
+
+## 致谢
+
+Icon made by [HJ Studio](https://www.flaticon.com/authors/hj-studio) from [www.flaticon.com](http://www.flaticon.com/)
