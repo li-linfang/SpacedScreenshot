@@ -1,5 +1,7 @@
-﻿using System;
+﻿using SpacedScreenshot.Properties;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,22 +11,35 @@ namespace SpacedScreenshot
 {
     public class SpacedScreenshotApplicationContext:ApplicationContext
     {
-        NotifyIcon notifyIcon = new NotifyIcon();
+        private static NotifyIcon s_notifyIcon = new NotifyIcon();
         string targetFolder = "D:\\";
         public SpacedScreenshotApplicationContext(string targetFolder)
         {
             this.targetFolder = targetFolder;
 
-            MenuItem screenshotMenuItem = new MenuItem("Screenshot", new EventHandler(Screenshot));
-            MenuItem configMenuItem = new MenuItem("Config", new EventHandler(Config));
-            MenuItem exitMenuItem = new MenuItem("Exit", new EventHandler(Exit));
+            ToolStripMenuItem statusItem = new ToolStripMenuItem("Number: 0", Resource1.AppIcon.ToBitmap());
+            ToolStripMenuItem screenshotMenuItem = new ToolStripMenuItem("Screenshot", Resource1.FolderIcon.ToBitmap(), Screenshot);
+            ToolStripMenuItem configMenuItem = new ToolStripMenuItem("Config", Resource1.FolderIcon.ToBitmap(), Config);
+            ToolStripMenuItem exitMenuItem = new ToolStripMenuItem("Exit", Resource1.ExitIcon.ToBitmap(), Exit);
 
             // Icon is from: <a href="https://www.flaticon.com/free-icons/screenshot" title="screenshot icons">Screenshot icons created by HJ Studio - Flaticon</a>
-            notifyIcon.Icon = SpacedScreenshot.Properties.Resource1.AppIcon;
-            notifyIcon.ContextMenu = new ContextMenu(new MenuItem[] {screenshotMenuItem, configMenuItem,exitMenuItem });
-            notifyIcon.Text = "SpacedScreenshot";
+            // Icon is from: <a href="https://www.flaticon.com/free-icons/folder" title="folder icons">Folder icons created by Freepik - Flaticon</a>
+            // Icon is from: <a href="https://www.flaticon.com/free-icons/logout" title="logout icons">Logout icons created by Freepik - Flaticon</a>
+
+            s_notifyIcon.Icon = SpacedScreenshot.Properties.Resource1.AppIcon;
+
+
+            ContextMenuStrip cms = new ContextMenuStrip();
+            cms.Items.Add(statusItem);
+            cms.Items.Add(screenshotMenuItem);
+            cms.Items.Add(configMenuItem);
+            cms.Items.Add(exitMenuItem);
+
+
+            s_notifyIcon.ContextMenuStrip = cms;
+            s_notifyIcon.Text = "SpacedScreenshot";
             
-            notifyIcon.Visible = true;
+            s_notifyIcon.Visible = true;
         }
 
         void Screenshot(object sender, EventArgs e)
@@ -37,8 +52,14 @@ namespace SpacedScreenshot
         }
         void Exit(object sender, EventArgs e)
         {
-            notifyIcon.Visible = false;
+            s_notifyIcon.Visible = false;
             Application.Exit();
+        }
+
+        public static void UpdateMenuItem(int index, string text)
+        {
+            ToolStripItem toolStripItem = s_notifyIcon.ContextMenuStrip.Items[index];
+            toolStripItem.Text = text;
         }
     }
 }

@@ -112,14 +112,22 @@ namespace SpacedScreenshot
         private void StartTakeScreenshot(int spaceTime, FolderStructureObject folderStructure, ScreenshotImageObject screenshotImage)
         {
             Console.WriteLine("Start take screenshot");
+            var count = 1;
             while(true)
             {
                 Task.Delay(spaceTime*1000).Wait();
-                TakeScreenShot(folderStructure.GetScreenshotPath(), screenshotImage.GetScreenshotFilename());
+                TakeScreenShot(folderStructure.GetScreenshotPath(), screenshotImage.GetScreenshotFilename(), count);
+                count++;
             }
         }
 
-        private void TakeScreenShot(string path, string name)
+
+        /// <summary>
+        /// Start screenshot operation.
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="name"></param>
+        private void TakeScreenShot(string path, string name, int count)
         {
             // Mock
             Console.WriteLine($"[{path}] Took a screenshot: {name}");
@@ -135,6 +143,8 @@ namespace SpacedScreenshot
                 case "png": imageFormat = ImageFormat.Png;break;
             }
             _bmpScreenshot.Save($"{path}\\{name}", ImageFormat.Jpeg);
+
+            SpacedScreenshotApplicationContext.UpdateMenuItem(0, $"Number: {count}");
         }
 
         class FolderStructureObject
