@@ -12,7 +12,9 @@ namespace SpacedScreenshot
     public class SpacedScreenshotApplicationContext:ApplicationContext
     {
         private static NotifyIcon s_notifyIcon = new NotifyIcon();
-        string targetFolder = "D:\\";
+        string targetFolder;
+
+
         public SpacedScreenshotApplicationContext(string targetFolder)
         {
             this.targetFolder = targetFolder;
@@ -40,6 +42,7 @@ namespace SpacedScreenshot
             s_notifyIcon.Text = "SpacedScreenshot";
             
             s_notifyIcon.Visible = true;
+            
         }
 
         void Screenshot(object sender, EventArgs e)

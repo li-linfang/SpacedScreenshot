@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace SpacedScreenshot
 {
@@ -97,6 +98,15 @@ namespace SpacedScreenshot
                 pauseTakeWhenUserNotActiveTask.Start();
             if (_autoCompressEnable || _autoDeleteCompressedPackageEnable)
                 autoCompressOrDeleteTask.Start();
+
+            //KeepThreadAlive(startTakeScreenTask);
+        }
+
+        private void KeepThreadAlive(Task task)
+        {
+            if (task.Status == TaskStatus.Faulted)
+                SpacedScreenshotApplicationContext.UpdateMenuItem(0, $"Error!");
+
         }
 
         private void AutoCompressOrDelete(string targetFolder, bool autoCompress, int compressDay, bool autoDeleteCompressedPackage, int deleteCompressedPackageDay)
@@ -129,22 +139,27 @@ namespace SpacedScreenshot
         /// <param name="name"></param>
         private void TakeScreenShot(string path, string name, int count)
         {
-            // Mock
-            Console.WriteLine($"[{path}] Took a screenshot: {name}");
-
-            Graphics g = Graphics.FromImage(_bmpScreenshot);
-            g.CopyFromScreen(Screen.PrimaryScreen.Bounds.X, Screen.PrimaryScreen.Bounds.Y, 0, 0, Screen.PrimaryScreen.Bounds.Size, CopyPixelOperation.SourceCopy);
-
-            string format = name.Split('.')[1];
-            ImageFormat imageFormat = null;
-            switch (format)
+            try
             {
-                case "jpg": imageFormat = ImageFormat.Jpeg;break;
-                case "png": imageFormat = ImageFormat.Png;break;
-            }
-            _bmpScreenshot.Save($"{path}\\{name}", ImageFormat.Jpeg);
+                Graphics g = Graphics.FromImage(_bmpScreenshot);
+                g.CopyFromScreen(Screen.PrimaryScreen.Bounds.X, Screen.PrimaryScreen.Bounds.Y, 0, 0, Screen.PrimaryScreen.Bounds.Size, CopyPixelOperation.SourceCopy);
 
-            SpacedScreenshotApplicationContext.UpdateMenuItem(0, $"Number: {count}");
+                string format = name.Split('.')[1];
+                ImageFormat imageFormat = null;
+                switch (format)
+                {
+                    case "jpg": imageFormat = ImageFormat.Jpeg;break;
+                    case "png": imageFormat = ImageFormat.Png;break;
+                }
+                _bmpScreenshot.Save($"{path}\\{name}", ImageFormat.Jpeg);
+
+                SpacedScreenshotApplicationContext.UpdateMenuItem(0, $"Number: {count}");
+            } catch (Exception e)
+            {
+                // Hwnd is null
+                // or Thread invoke error
+                Console.WriteLine(e.Message);
+            }
         }
 
         class FolderStructureObject
