@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SpaceScreenshotObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- ########################### 文件夹相关参数 ###########################-->
+  <!-- 截图存储的顶层路径 -->
+  <TargetFolder>D:\ScreenshotTest</TargetFolder>
+  <!-- 文件夹结构：
+	  0：24小时（00-01, 01-02, 02-03...）
+	  1：上午下午（AM, PM）
+	  2：电脑活动时段（人在电脑前操作的时间段范围，09-30~09-45）
+  -->
+  <FolderStructureMethod>1</FolderStructureMethod>
+
+  <!-- ########################### 截图相关参数 ###########################-->
+  <!-- 图片格式：
+	  0：png
+	  1：jpg
+  -->
+  <ScreenshotFormat>1</ScreenshotFormat>
+  <!-- 图片质量（0-100） -->
+  <ScreenshotQuality>90</ScreenshotQuality>
+  <!-- 图片名称的前缀 -->
+  <ScreenshotPrefix>Screenshot</ScreenshotPrefix>
+  <!-- 命名规则：
+	  0：序列号（1, 2, 3...）
+	  1：时间（2022-10-23~04-23-24）
+	  2：序列号+时间（1_2022-10-23~04-23-24）
+  -->
+  <ScreenshotNamingRule>1</ScreenshotNamingRule>
+  <!-- 图片名称的后缀 -->
+  <ScreenshotSuffix></ScreenshotSuffix>
+
+  <!-- ########################### 截图控制相关 ###########################-->
+  <!-- 间隔时间（秒） -->
+  <SpacedTime>2</SpacedTime>
+  <NotActiveTime>60</NotActiveTime>
+  <PauseWhenNotActiveEnable>true</PauseWhenNotActiveEnable>
+  <AutoCompressEnable>true</AutoCompressEnable>
+  <CompresssDay>7</CompresssDay>
+  <AutoDeleteCompressedPackageEnable>true</AutoDeleteCompressedPackageEnable>
+  <DeleteCompressedPackageDay>30</DeleteCompressedPackageDay>
+</SpaceScreenshotObject>
