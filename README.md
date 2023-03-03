@@ -1,5 +1,11 @@
 ﻿# ![](./Resources/AppIcon.ico)SpacedScreenshot
 
+
+
+![SpacedScreenshot](./assets/SpacedScreenshot.png)
+
+
+
 定时截取 Windows 的屏幕，方便在探索性的软件功能测试中发现 Bug 时，准确回溯操作步骤，进行 Bug 描述与复现。
 
 
